@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Table from './components/Table';
+import { Table } from 'react-bootstrap';
 
 export default function Customers() {
   const [customers, setCustomers] = useState([]);
@@ -10,9 +10,30 @@ export default function Customers() {
       setCustomers(res.data);
     };
     fetchCustomers();
-  }, []);
+  }, [])
 
   return (
-    <Table customers={customers} />
+    <Table striped bordered hover>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Mobile</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          customers.map((item) => (
+            <tr key={item}>
+            <td>{item.name}</td>
+            <td>{item.address}</td>
+            <td>{item.mobile}</td>
+            <td>{item.email}</td>
+          </tr>
+          ))
+        }
+      </tbody>
+    </Table>
   );
 }
