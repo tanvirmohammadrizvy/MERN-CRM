@@ -4,9 +4,11 @@ import Layout from '../Layout/index';
 import MainWrapper from './MainWrapper';
 import LogIn from '../LogIn/index';
 import Customers from '../Customer/Customers';
+import addCustomers from '../Customer/addCustomers';
 
 const Pages = () => (
   <Switch>
+    <Route path="/customers/add" component={addCustomers} />
     <Route path="/customers/all" component={Customers} />
   </Switch>
 );

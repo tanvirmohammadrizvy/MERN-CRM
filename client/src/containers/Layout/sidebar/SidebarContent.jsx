@@ -12,8 +12,8 @@ const SidebarContent = ({ onClick, changeToDark, changeToLight }) => {
     <div className="sidebar__content">
       <ul className="sidebar__block">
         <SidebarCategory title="Customers" icon="diamond">
-          <SidebarLink title="Customers" route="/customers/all" onClick={handleHideSidebar} />
           <SidebarLink title="Add Customers" route="/customers/add" onClick={handleHideSidebar} />
+          <SidebarLink title="Customers" route="/customers/all" onClick={handleHideSidebar} />
         </SidebarCategory>
       </ul>
       <ul className="sidebar__block">

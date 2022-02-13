@@ -62,7 +62,7 @@ const LogInForm = ({ handleSubmit }) => {
           />
         </div>
       </div>
-      <Link className="btn btn-primary account__btn account__btn--small" to="/customers/all">Sign In</Link>
+      <Link className="btn btn-primary account__btn account__btn--small" to="/customers/add">Sign In</Link>
     </form>
   );
 };
